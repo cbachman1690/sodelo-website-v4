@@ -523,6 +523,121 @@ ul, ol { list-style: none; }
 }
 .footer-legal { font-size: 11px; color: rgba(255,255,255,0.35); }
 
+/* ── Volunteer page ── */
+.volunteer-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(27,42,74,0.10);
+  margin-bottom: 8px;
+}
+.volunteer-card-accent { height: 6px; }
+.volunteer-card-accent--gold  { background: var(--gold); }
+.volunteer-card-accent--navy  { background: var(--navy); }
+.volunteer-card-inner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  padding: 40px 44px;
+  align-items: center;
+}
+.volunteer-eyebrow {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 10px;
+}
+.volunteer-title {
+  font-family: var(--font-serif);
+  font-size: 26px; font-weight: 700;
+  color: var(--navy); line-height: 1.25;
+  margin-bottom: 16px;
+}
+.volunteer-body {
+  font-size: 15px; color: var(--gray-500);
+  line-height: 1.8; margin-bottom: 14px;
+}
+.volunteer-details {
+  display: flex; flex-wrap: wrap; gap: 20px;
+  margin: 24px 0;
+  padding: 20px;
+  background: var(--ivory);
+  border-radius: 8px;
+}
+.volunteer-detail-item { min-width: 160px; }
+.volunteer-detail-label {
+  font-size: 9px; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 4px;
+}
+.volunteer-detail-value {
+  font-size: 13px; font-weight: 700;
+  color: var(--navy); line-height: 1.4;
+}
+.volunteer-badge-circle {
+  width: 140px; height: 140px; border-radius: 50%;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; gap: 6px;
+  flex-shrink: 0;
+}
+.volunteer-badge-circle--gold { background: var(--gold); }
+.volunteer-badge-circle--navy { background: var(--navy); }
+.volunteer-badge-icon {
+  font-size: 32px; line-height: 1;
+  color: #fff;
+}
+.volunteer-badge-label {
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  color: rgba(255,255,255,0.85); line-height: 1.4;
+}
+.volunteer-badge-circle--gold .volunteer-badge-label { color: var(--navy); }
+.volunteer-badge-circle--gold .volunteer-badge-icon  { color: var(--navy); }
+
+/* Other ways to help */
+.other-help-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 8px;
+}
+.help-item {
+  background: var(--ivory); border-radius: 8px;
+  padding: 28px 24px;
+}
+.help-icon {
+  font-size: 18px; margin-bottom: 14px;
+  width: 40px; height: 40px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+}
+.help-icon--burg { background: var(--burg); color: #fff; }
+.help-icon--gold { background: var(--gold); color: var(--navy); }
+.help-icon--navy { background: var(--navy); color: #fff; }
+.help-title {
+  font-family: var(--font-serif);
+  font-size: 17px; font-weight: 700;
+  color: var(--navy); margin-bottom: 10px;
+}
+.help-body {
+  font-size: 13px; color: var(--gray-500); line-height: 1.7;
+}
+
+/* Volunteer CTA strip */
+.volunteer-cta-strip {
+  background: var(--navy);
+  padding: 60px 32px;
+  text-align: center;
+}
+.volunteer-cta-inner { max-width: 600px; margin: 0 auto; }
+.volunteer-cta-title {
+  font-family: var(--font-serif);
+  font-size: 34px; font-weight: 700;
+  color: #fff; margin-bottom: 12px;
+}
+.volunteer-cta-body {
+  font-size: 16px; color: rgba(255,255,255,0.7);
+  margin-bottom: 28px; line-height: 1.6;
+}
+
 /* ── Responsive ── */
 @media (max-width: 900px) {
   .event-grid { grid-template-columns: 1fr; }
@@ -530,6 +645,9 @@ ul, ol { list-style: none; }
   .about-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .stats-grid { grid-template-columns: repeat(2,1fr); gap: 32px; }
+  .volunteer-card-inner { grid-template-columns: 1fr; }
+  .volunteer-card-badge { display: none; }
+  .other-help-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 640px) {
   .header-nav { display: none; }
@@ -538,3 +656,4 @@ ul, ol { list-style: none; }
   .hero-title { font-size: 36px; }
   .page-banner-title { font-size: 36px; }
 }
+
